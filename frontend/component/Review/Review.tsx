@@ -9,36 +9,37 @@ import { motion } from "framer-motion";
 
 const testimonials = [
     {
-        name: "ujjwal Sharma",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur exercitationem officiis ea enim vero. Molestias delectus, libero, ratione quaerat quam",
-        position: "Co-founder Xcentic",
+        name: "Ravi Mehra",
+        text: "Mediists helped us during an emergency when every second mattered. The ambulance reached in under 10 minutes — truly life-saving.",
+        position: "Founder, HealthBridge Patna",
         imageSrc: person
     },
     {
-        name: "ujjwal Sharma",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur exercitationem officiis ea enim vero. Molestias delectus, libero, ratione quaerat quam",
-        position: "Co-founder Xcentic",
+        name: "Ananya Sharma",
+        text: "Booking a doctor consultation for my father in a rural area was surprisingly easy with Mediists. The experience was smooth and fast.",
+        position: "Digital Health Consultant",
         imageSrc: person
     },
     {
-        name: "ujjwal Sharma",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur exercitationem officiis ea enim vero. Molestias delectus, libero, ratione quaerat quam",
-        position: "Co-founder Xcentic",
+        name: "Vikram Singh",
+        text: "The real-time tracking feature gave us peace of mind. We could follow the ambulance every step of the way.",
+        position: "Operations Manager, SevaPlus",
         imageSrc: person
     },
     {
-        name: "ujjwal Sharma",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur exercitationem officiis ea enim vero. Molestias delectus, libero, ratione quaerat quam",
-        position: "Co-founder Xcentic",
+        name: "Neha Verma",
+        text: "Reliable, fast, and user-friendly. Mediists is exactly what the Indian healthcare system needs in emergencies.",
+        position: "Senior Nurse, CarePoint Clinic",
         imageSrc: person
     },
     {
-        name: "ujjwal Sharma",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur exercitationem officiis ea enim vero. Molestias delectus, libero, ratione quaerat quam",
-        position: "Co-founder Xcentic",
+        name: "Aman Tiwari",
+        text: "From booking to doorstep service, everything worked flawlessly. Kudos to the team for building something truly impactful.",
+        position: "Co-founder, RuralReach",
         imageSrc: person
     }
-]
+];
+
 
 const Review = () => {
     return (
@@ -64,7 +65,6 @@ const Review = () => {
                             className="hidden lg:block"
                             duration={17}
                         />
-
                     </div>
                 </div>
             </section>
@@ -114,7 +114,7 @@ const TestimonialsColumn = (props: {
                                     {`"${text}"`}
                                 </p>
                                 <div className=" flex gap-4 items-center">
-                                    <Image src={imageSrc} alt="" className="rounded-full h-10 w-10 overflow-hidden" />
+                                    {/* <Image src={imageSrc} alt="" className="rounded-full h-10 w-10 overflow-hidden" /> */}
                                     <div>
                                         <h2 className="text-xs font-bold mb-1 text-black/70">{name}</h2>
                                         <p className="text-xs font-light text-black/50">{position}</p>

@@ -28,7 +28,7 @@ const About = () => {
                             <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                                 <h2
                                     className="text-white text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                                    Lorem ipsum dolor sit amet.</h2>
+                                    Ambulance Access Made Smarter</h2>
                                 <p className="text-gray-300 text-base font-normal leading-relaxed lg:text-start text-center">
                                     We are building a tech-enabled, reliable ambulance network
                                     that connects patients with verified drivers in real-time.
