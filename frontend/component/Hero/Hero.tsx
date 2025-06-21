@@ -319,9 +319,9 @@ const Hero = () => {
           </div>
 
           {/* Right Form */}
-          <div className="w-full lg:w-full flex justify-end items-end px-5 relative ">
+          <div className="w-full lg:w-full flex justify-end items-end px-2 md:px-5 relative ">
             <img src={ambulance.src} alt="" className="absolute top-[50%] left-0 translate-y-[-20%] md:flex hidden translate-x-[-10%] z-0 scale-90" />
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 max-w-lg lg:ml-0 z-40 translate-x-[0%] md:translate-x-[15%]">
+            <div className="bg-white rounded-3xl shadow-xl p-5 md:p-10 max-w-lg lg:ml-0 z-40 translate-x-[0%] md:translate-x-[15%]">
               {isFormSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(1, 144, 80, 0.1)' }}>
@@ -341,11 +341,11 @@ const Hero = () => {
                 </div>
               ) : (
                 <>
-                  <div className="w-full text-white rounded-xl p-4 mb-8 flex items-center bg-[#164972]">
+                  <div className="w-full text-white rounded-xl p-3 sm:p-4 mb-8 flex items-center bg-[#164972]">
                     <AlertCircle className="mr-3" size={24} />
                     <div>
-                      <h3 className="font-bold">Emergency Service 24/7</h3>
-                      <p className="text-white/80 text-sm">Get a callback in 5 seconds</p>
+                      <h3 className="font-bold text-[15px] md:text-lg">Emergency Service 24/7</h3>
+                      <p className="text-white/80 text-xs sm:text-sm">Get a callback in 5 seconds</p>
                     </div>
                   </div>
 
@@ -382,11 +382,11 @@ const Hero = () => {
                       {isSubmitting ? (
                         <>
                           <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                          <span>BOOKING...</span>
+                          <span className="text-xs sm:text-lg">BOOKING...</span>
                         </>
                       ) : (
                         <>
-                          <span className="mr-2">BOOK AMBULANCE NOW</span>
+                          <span className="mr-2 text-xs sm:text-lg">BOOK AMBULANCE NOW</span>
                           <ChevronRight size={20} />
                         </>
                       )}
