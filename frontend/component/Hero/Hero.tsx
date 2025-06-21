@@ -319,9 +319,9 @@ const Hero = () => {
           </div>
 
           {/* Right Form */}
-          <div className="w-full lg:w-full flex justify-end items-end px-2 md:px-5 relative ">
+          <div className="w-full lg:w-full flex justify-end items-end px-5 relative">
             <img src={ambulance.src} alt="" className="absolute top-[50%] left-0 translate-y-[-20%] md:flex hidden translate-x-[-10%] z-0 scale-90" />
-            <div className="bg-white rounded-3xl shadow-xl p-5 md:p-10 max-w-lg lg:ml-0 z-40 translate-x-[0%] md:translate-x-[15%]">
+            <div className="bg-slate-100 rounded-3xl shadow-xl p-5 md:p-10 max-w-lg lg:ml-0 z-40 translate-x-[0%] md:translate-x-[15%]">
               {isFormSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(1, 144, 80, 0.1)' }}>
