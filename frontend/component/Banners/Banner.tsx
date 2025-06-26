@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-
+import Link from 'next/link'
 const Banner = () => {
   const [xPosition, setXPosition] = useState(0);
   const [yPosition, setYPosition] = useState(0);
 
-  const handleMouseMove = (e : any) => {
+  const handleMouseMove = (e: any) => {
     const { clientX: x, clientY: y } = e;
     setXPosition((x / 15) - 10);
     setYPosition((y / 15) - 10);
@@ -29,7 +29,7 @@ const Banner = () => {
             background: `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)`
           }}
         />
-        
+
         {/* Floating Elements */}
         <div
           className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white opacity-10 transition-transform duration-300"
@@ -52,9 +52,11 @@ const Banner = () => {
           <p className="text-blue-100 text-center max-w-2xl text-sm md:text-base mb-6 md:mb-10">
             Join thousands of satisfied customers who trust RapidCare for their emergency medical needs
           </p>
-          <button className="px-6 py-3 rounded-2xl bg-white text-[#019050] font-bold text-sm md:text-base hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            Request an Ambulance
-          </button>
+          <Link href={'/#form'}>
+            <button className="px-6 py-3 rounded-2xl bg-white text-[#164972] font-bold text-sm md:text-base hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              Request an Ambulance
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ const Header = () => {
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+
     };
 
     const toggleDropdown = (dropdown: any) => {
@@ -19,7 +20,7 @@ const Header = () => {
     };
 
     return (
-        <header className="w-full min-h-[60px] py-3 bg-white shadow-sm z-50 sticky top-0 z-50">
+        <header className="w-full min-h-[60px] py-3 bg-white shadow-sm z-50 sticky top-0">
             <div className="max-w-7xl flex items-center lg:mx-auto mx-4 sm:mx-5 gap-4 lg:gap-20 relative z-50 justify-between">
                 {/* Logo */}
                 <div className="flex-shrink-0">
@@ -47,19 +48,19 @@ const Header = () => {
                             </Link>
                             <ul className="absolute top-[100%] mt-3 bg-[#164972] w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-3 font-medium capitalize cursor-pointer rounded-xl space-y-2 shadow-xl z-50 transition-all duration-300">
                                 <li className="hover:bg-[#199dd1] rounded-lg p-3 cursor-pointer duration-200 text-white">
-                                    <Link href={'/#services'}>
+                                    <Link href={'/#bls'}>
                                         <h1 className="text-white">Basic Life Support</h1>
                                         <p className="text-sm text-gray-300">Emergency medical care and support</p>
                                     </Link>
                                 </li>
                                 <li className="hover:bg-[#199dd1] rounded-lg p-3 cursor-pointer duration-200 text-white">
-                                    <Link href={'/#services'}>
+                                    <Link href={'/#als'}>
                                         <h1 className="text-white">Advanced Life Support</h1>
                                         <p className="text-sm text-gray-300">Critical care medical services</p>
                                     </Link>
                                 </li>
                                 <li className="hover:bg-[#199dd1] rounded-lg p-3 cursor-pointer duration-200 text-white">
-                                    <Link href={'/#services'}>
+                                    <Link href={'/#pt'}>
                                         <h1 className="text-white">Patient Transport Vehicle</h1>
                                         <p className="text-sm text-gray-300">Safe medical transportation</p>
                                     </Link>
@@ -171,18 +172,24 @@ const Header = () => {
                             <div className={`overflow-hidden transition-all duration-300 ${activeDropdown === 'services' ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                                 }`}>
                                 <ul className="ml-4 mt-2 space-y-2 border-l-2 border-gray-100 pl-4">
-                                    <li className="py-2 px-3 hover:bg-[#199dd1] hover:text-white rounded-lg cursor-pointer transition-all duration-200">
-                                        <h1 className="font-medium">Basic Life Support</h1>
-                                        <p className="text-sm opacity-70">Emergency medical care and support</p>
-                                    </li>
-                                    <li className="py-2 px-3 hover:bg-[#199dd1] hover:text-white rounded-lg cursor-pointer transition-all duration-200">
-                                        <h1 className="font-medium">Advanced Life Support</h1>
-                                        <p className="text-sm opacity-70">Critical care medical services</p>
-                                    </li>
-                                    <li className="py-2 px-3 hover:bg-[#199dd1] hover:text-white rounded-lg cursor-pointer transition-all duration-200">
-                                        <h1 className="font-medium">Patient Transport Vehicle</h1>
-                                        <p className="text-sm opacity-70">Safe medical transportation</p>
-                                    </li>
+                                    <Link href={'/#bls'}>
+                                        <li className="py-2 px-3 hover:bg-[#199dd1] hover:text-white rounded-lg cursor-pointer transition-all duration-200">
+                                            <h1 className="font-medium">Basic Life Support</h1>
+                                            <p className="text-sm opacity-70">Emergency medical care and support</p>
+                                        </li>
+                                    </Link>
+                                    <Link href={'/#als'}>
+                                        <li className="py-2 px-3 hover:bg-[#199dd1] hover:text-white rounded-lg cursor-pointer transition-all duration-200">
+                                            <h1 className="font-medium">Advanced Life Support</h1>
+                                            <p className="text-sm opacity-70">Critical care medical services</p>
+                                        </li>
+                                    </Link>
+                                    <Link href={'/#pt'}>
+                                        <li className="py-2 px-3 hover:bg-[#199dd1] hover:text-white rounded-lg cursor-pointer transition-all duration-200">
+                                            <h1 className="font-medium">Patient Transport Vehicle</h1>
+                                            <p className="text-sm opacity-70">Safe medical transportation</p>
+                                        </li>
+                                    </Link>
                                 </ul>
                             </div>
                         </li>
@@ -194,7 +201,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/#contactus"  className="block py-3 px-4 font-medium text-gray-800 hover:text-[#199dd1] hover:bg-gray-50 rounded-lg transition-all duration-200">
+                            <Link href="/#contactus" className="block py-3 px-4 font-medium text-gray-800 hover:text-[#199dd1] hover:bg-gray-50 rounded-lg transition-all duration-200">
                                 Contact
                             </Link>
                         </li>
@@ -271,10 +278,10 @@ const Header = () => {
                 </nav>
             </div>
 
-            {/* Mobile Menu Overlay */}
+            
             {isMobileMenuOpen && (
                 <div
-                    className="lg:hidden fixed inset-0 bg-black bg-opacity-25 z-30 top-[8vh]"
+                    className="lg:hidden fixed inset-0 bg-black/20 bg-opacity-25 z-30 top-[8vh]"
                     onClick={toggleMobileMenu}
                 ></div>
             )}

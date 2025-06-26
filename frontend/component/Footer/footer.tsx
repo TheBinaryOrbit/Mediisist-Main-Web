@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaGooglePlay, FaAppStoreIos, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import footerlogo from '@/assets/footerlogo.png'
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -21,19 +22,19 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Services</h3>
                         <ul className="flex flex-col gap-2 text-sm">
-                            <li className="hover:text-gray-300 cursor-pointer">Basic Life Support</li>
-                            <li className="hover:text-gray-300 cursor-pointer">Advanced Life Support</li>
-                            <li className="hover:text-gray-300 cursor-pointer">Patient Transport Vehicle</li>
-                            <li className="hover:text-gray-300 cursor-pointer">Our Diagnosis app</li>
+                            <Link href={'/#bls'} className="hover:text-gray-300 cursor-pointer">Basic Life Support</Link>
+                            <Link href={'/#als'} className="hover:text-gray-300 cursor-pointer">Advanced Life Support</Link>
+                            <Link href={'/#pt'} className="hover:text-gray-300 cursor-pointer">Patient Transport Vehicle</Link>
+                            <Link href={''} className="hover:text-gray-300 cursor-pointer">Our Diagnosis app</Link>
                         </ul>
                     </div>
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Company</h3>
                         <ul className="flex flex-col gap-2 text-sm">
-                            <li className="hover:text-gray-300 cursor-pointer">About Us</li>
-                            <li className="hover:text-gray-300 cursor-pointer">Contact Us</li>
-                            <li className="hover:text-gray-300 cursor-pointer">Privecy Policy</li>
-                            <li className="hover:text-gray-300 cursor-pointer">Terms and conditions</li>
+                            <Link href={'/#about'} className="hover:text-gray-300 cursor-pointer">About Us</Link>
+                            <Link href={'/#contactus'} className="hover:text-gray-300 cursor-pointer">Contact Us</Link>
+                            <Link href={'/privecypolicy'} className="hover:text-gray-300 cursor-pointer">Privacy Policy</Link>
+                            <Link href={'/termsconditions'} className="hover:text-gray-300 cursor-pointer">Terms and conditions</Link>
                         </ul>
                     </div>
                     <div>
@@ -67,7 +68,9 @@ const Footer = () => {
                     <li className='cursor-pointer'><FaFacebook /></li>
                     <li className='cursor-pointer'><FaSquareXTwitter /></li>
                     <li className='cursor-pointer'><FaLinkedin /></li>
-                    <li className='cursor-pointer'><FaInstagram /></li>
+                    <a href="https://www.instagram.com/mediisist/" target='blank'>
+                        <li className='cursor-pointer'><FaInstagram /></li>
+                    </a>
                 </ul>
             </div>
         </footer>

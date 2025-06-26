@@ -9,19 +9,22 @@ const content = [
         title1: "Basic Life Support",
         title2: "(BLS)",
         description: "Our BLS ambulances provide essential emergency medical care with trained EMTs, equipped with oxygen therapy, automated external defibrillators (AED), spinal immobilization equipment, and basic airway management tools. Perfect for stable patients requiring medical transportation and basic emergency interventions.",
-        img: blsImage.src
+        img: blsImage.src,
+        id : "bls"
     },
     {
         title1: "Advanced Life Support", 
         title2: "(ALS)",
         description: "ALS ambulances feature paramedics trained in advanced medical procedures, equipped with cardiac monitors, IV therapy capabilities, advanced airway management, medication administration, and life-saving equipment. Designed for critical patients requiring intensive pre-hospital care and emergency interventions.",
-        img: alsImage.src
+        img: alsImage.src,
+        id : "als"
     },
     {
         title1: "Patient Transport",
         title2: "Vehicle",
         description: "Specialized non-emergency medical transport vehicles for patients who need medical supervision during transfer between healthcare facilities, routine medical appointments, or discharge transportation. Equipped with basic monitoring equipment and staffed by qualified medical personnel.",
-        img: transportImage.src
+        img: transportImage.src,
+        id : "pt"
     }
 ]
 
@@ -40,7 +43,7 @@ function AmbulanceServices() {
             <div className="mx-auto max-w-7xl">
                 {
                     content.map((item, index) => (
-                        <div key={index} className={`w-full h-fit flex ${(index+1)%2 == 0 ? 'md:flex-row flex-col-reverse' : 'md:flex-row-reverse flex-col-reverse'} justify-between items-start md:gap-20 relative mb-20`}>
+                        <div key={index} className={`w-full h-fit flex ${(index+1)%2 == 0 ? 'md:flex-row flex-col-reverse' : 'md:flex-row-reverse flex-col-reverse'} justify-between items-start md:gap-20 relative mb-20`} id={item.id}>
                             <div className='md:w-1/2 p-2 sm:p-5 md:sticky top-[10vh] left-0'>
                                 <h2 className="text-3xl sm:text-3xl text-gray-800 font-lora font-semibold text-left mb-2 md:mb-4" data-aos="fade-up">
                                     {item.title1}<span className="text-logocolor"> {item.title2}</span>
