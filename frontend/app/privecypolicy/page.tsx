@@ -89,7 +89,7 @@ const PrivacyPolicy = () => {
             </div>
             <div>
               <h1 className="text-4xl font-bold text-[#1a365d]">Privacy Policy</h1>
-              <p className="text-[#0066cc] font-semibold">MediAssist Healthcare Services</p>
+              <p className="text-[#0066cc] font-semibold">Mediisist Healthcare Services</p>
             </div>
           </div>
           <p className="text-gray-600">Effective Date: July 2025 | Last Updated: July 3, 2025</p>
