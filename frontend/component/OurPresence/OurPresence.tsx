@@ -9,7 +9,7 @@ const OurPresence = () => {
             <section className='bg-white py-20 md:rounded-br-[10%]'>
                 <div className="mb-0 text-center flex justify-center flex-col items-center">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold py-5 font-lora tracking-wider text-slate-800" data-aos="fade-up">
-                        Our<span className="text-[#199dd1]"> Precence</span>
+                        Our<span className="text-[#199dd1]"> Presence</span>
                     </h2>
                     <p className="text-lg sm:text-md font-normal font-lora text-gray-500 max-w-md md:max-w-2xl mx-auto px-5 mb-16" data-aos="fade-up">
                         Book your medical services directly from your phone and get instant support when it matters most
