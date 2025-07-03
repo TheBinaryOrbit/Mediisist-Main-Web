@@ -4,13 +4,14 @@ import { Phone, Heart, Shield, Clock, User, AlertCircle, ChevronRight } from "lu
 import ambulance from '@/assets/ambulance.png'
 import { toast } from "react-toastify";
 import { axiosClient } from "@/lib/axiosClient";
-
+import Link from "next/link";
 const Hero = () => {
   const [name, setName] = useState("");
   const [contactNo, setContactNo] = useState("");
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [sessionId , setSessionId] = useState<string | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: any) => {
@@ -44,6 +45,7 @@ const Hero = () => {
 
       if (response.status == 201 || response.status == 200) {
         toast.success("Submited Sucessfully");
+        setSessionId(response.data.ride.sessionKey);
         setIsFormSubmitted(true);
       }
     } catch (error) {
@@ -54,11 +56,6 @@ const Hero = () => {
     }
   };
 
-  const resetForm = () => {
-    setIsFormSubmitted(false);
-    setName("");
-    setContactNo("");
-  };
 
   return (
     <section className="min-h-screen py-12 px-4 overflow-hidden" id="form">
@@ -169,13 +166,9 @@ const Hero = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-gray-800">Help is on the way!</h3>
                     <p className="text-gray-600 mt-2 mb-6">Your emergency request has been received. Our team will contact you immediately.</p>
-                    <button
-                      onClick={resetForm}
-                      className="font-semibold hover:opacity-80 transition-opacity"
-                      style={{ color: '#199dd1' }}
-                    >
-                      Submit Another Request
-                    </button>
+                    <Link href={`/getlocation/${sessionId}`} className="text-blue-600 hover:underline font-bold">
+                      Grant Location
+                    </Link>
                   </div>
                 ) : (
                   <>
