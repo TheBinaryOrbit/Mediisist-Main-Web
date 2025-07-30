@@ -9,7 +9,7 @@ import { MapPin, Wifi, WifiOff } from 'lucide-react';
 import { axiosClient } from '@/lib/axiosClient';
 import { toast } from 'react-toastify';
 import { Check } from 'lucide-react';
-
+import { useParams } from 'next/navigation';
 
 interface AmbulanceData {
     ambulanceId: string;
@@ -18,18 +18,17 @@ interface AmbulanceData {
     isOnline: boolean;
 }
 
-interface TrackLocationPageProps {
-    params: { id: string };
-}
+
 
 let socket: Socket;
 
-const TrackLocationPage: React.FC<TrackLocationPageProps> = ({ params }) => {
+const TrackLocationPage = () => {
     const [ambulanceData, setAmbulanceData] = useState<AmbulanceData | null>(null)
     const [isRecentering, setIsRecentering] = useState<boolean>(false);
     const [mapCenter, setMapcenter] = useState<[number, number]>(ambulanceData ? ambulanceData.position : [28.6139, 77.2090]);
     const [mapInstance, setMapInstance] = useState<any>(null);
     const [isRideCompleted, setIsRideCompleted] = useState<boolean>(false);
+    const params = useParams()
 
     useEffect(() => {
         console.log("Mapinstance" + mapInstance);
@@ -93,7 +92,7 @@ const TrackLocationPage: React.FC<TrackLocationPageProps> = ({ params }) => {
                 }
 
                 setAmbulanceData({
-                    ambulanceId: params.id,
+                    ambulanceId: String(params.id),
                     position: [latitude, longitude],
                     lastUpdated: new Date(),
                     isOnline: true,
@@ -270,7 +269,7 @@ const TrackLocationPage: React.FC<TrackLocationPageProps> = ({ params }) => {
                             zoom={ambulanceData ? 30 : 30}
                             scrollWheelZoom={true}
                             style={{ height: '100%', width: '100%' }}
-                            whenCreated={setMapInstance}
+                            
                         >
                             <TileLayer
                                 attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
