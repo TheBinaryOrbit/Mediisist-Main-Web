@@ -34,7 +34,7 @@ const TrackLocationPage = () => {
         console.log("Mapinstance" + mapInstance);
     }, [mapInstance]);
 
-    const baseUrl = 'https://mediisist.in';
+    const baseUrl = 'https://api.mediisist.in';
 
     const fetchRideDetails = async () => {
         try {
