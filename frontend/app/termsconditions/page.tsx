@@ -1,5 +1,7 @@
 import { ArrowLeft, FileText, AlertTriangle, Clock, Phone, Shield, Users, CreditCard, Scale } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import backgroundimage from "@/assets/backgroundimage.png";
 
 const TermsConditions = () => {
 const sections = [
@@ -90,39 +92,47 @@ const sections = [
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <Link 
-            href={'/'}
-            className="inline-flex items-center text-[#0066cc] hover:text-[#0052a3] mb-4 transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Back to Home
-          </Link>
-          <div className="flex items-center mb-4">
-            <div className="bg-[#0066cc] p-3 rounded-xl mr-4">
-              <Scale className="h-8 w-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-4xl font-bold text-[#1a365d]">Terms & Conditions</h1>
-              <p className="text-[#0066cc] font-semibold">MediAssist Healthcare Services</p>
-            </div>
-          </div>
-          <p className="text-gray-600">Effective Date: July 2025 | Last Updated: July 3, 2025</p>
-        </div>
-      </div>
 
+      <div className="bg-blue-100 shadow-sm ">
+              <div className="relative min-h-[66vh]">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={backgroundimage}
+                    alt="Background"
+                    fill
+                    className="object-cover w-full h-full"
+                    quality={100}
+                  />
+                </div>
+      
+                <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-24">
+                  <div className="bg-white p-3 rounded-xl mr-4">
+                    <Scale className="h-8 w-8 text-[#0066cc]" />
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold  py-5 tracking-wider font-body text-white" data-aos="fade-up" >
+                    Terms & Conditions
+                  </h2>
+                  <p className="text-md sm:text-md font-normal text-gray-100 max-w-md md:max-w-2xl mx-auto px-5 font-body mb-4" data-aos="fade-up">
+                            These terms govern your use of our website and services. Please read them carefully to understand your rights and responsibilities.
+                  </p>
+                  <p className="text-md sm:text-md font-normal text-gray-100 max-w-md md:max-w-2xl mx-auto px-5 font-body" data-aos="fade-up">
+                    Effective Date: July 2025 | Last Updated: July 3, 2025
+                  </p>
+                </div>
+              </div>
+            </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Introduction */}
-        <div className="bg-white rounded-xl shadow-sm border p-8 mb-8">
+        <div className="rounded-xl  p-8 mb-8">
           <h2 className="text-2xl font-bold text-[#1a365d] mb-4">Agreement Overview</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
             These Terms and Conditions ("Terms") govern your access to and use of Mediisist healthcare services, 
             including our mobile application, website, and all related services (collectively, the "Services").
           </p>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-justify">
             By accessing or using our Services, you enter into a legally binding agreement with Mediisist. 
             Please read these Terms carefully and contact us if you have any questions before using our Services.
           </p>
@@ -131,19 +141,17 @@ const sections = [
         {/* Sections */}
         <div className="space-y-6">
           {sections.map((section, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+            <div key={index} className="rounded-xl transition-shadow">
               <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="bg-[#0066cc] p-3 rounded-xl mr-4">
-                    <section.icon className="h-6 w-6 text-white" />
-                  </div>
+                  
                   <h2 className="text-2xl font-bold text-[#1a365d]">{section.title}</h2>
                 </div>
                 <div className="space-y-4">
                   {section.content.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-start">
-                      <div className="w-2 h-2 bg-[#0066cc] rounded-full mt-2.5 mr-4 flex-shrink-0"></div>
-                      <p className="text-gray-700 leading-relaxed">{item}</p>
+                      <div className="w-2 h-2 bg-[#1a365d] rounded-full mt-2.5 mr-4 flex-shrink-0"></div>
+                      <p className="text-gray-700 leading-relaxed text-justify">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -158,7 +166,7 @@ const sections = [
             <Scale className="h-6 w-6 text-blue-600 mt-1 mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-xl font-bold text-blue-800 mb-3">Governing Law & Jurisdiction</h3>
-              <p className="text-blue-700 leading-relaxed">
+              <p className="text-blue-700 leading-relaxed text-justify">
                 These Terms are governed by the laws of India. Any disputes arising from these Terms or your use of our Services 
                 will be subject to the exclusive jurisdiction of the courts in Bihar, India. We strive to resolve all disputes 
                 through good faith negotiations before resorting to legal proceedings.
@@ -166,21 +174,6 @@ const sections = [
             </div>
           </div>
         </div>
-
-        {/* Emergency Notice
-        <div className="bg-red-50 border border-red-200 rounded-xl p-8 mt-6">
-          <div className="flex items-start">
-            <AlertTriangle className="h-6 w-6 text-red-600 mt-1 mr-4 flex-shrink-0" />
-            <div>
-              <h3 className="text-xl font-bold text-red-800 mb-3">Emergency Disclaimer</h3>
-              <p className="text-red-700 leading-relaxed">
-                <strong>IMPORTANT:</strong> In case of life-threatening emergencies, call 108 (India Emergency Services) immediately. 
-                Mediisist services are complementary to, not a replacement for, official emergency response systems. 
-                These Terms do not limit your rights to emergency medical care or immediate emergency response when required.
-              </p>
-            </div>
-          </div>
-        </div> */}
 
         {/* Contact Information */}
         <div className="bg-[#1a365d] text-white rounded-xl p-8 mt-8">

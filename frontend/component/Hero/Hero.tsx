@@ -58,7 +58,7 @@ const Hero = () => {
 
 
   return (
-    <section className="min-h-screen py-12 px-4 overflow-hidden" id="form">
+    <section className="h-full py-12 px-4 overflow-hidden" id="form">
 
       <div className="max-w-7xl mx-auto z-10 " >
         <div className="grid lg:grid-cols-2 gap-12 items-center justify-between">
@@ -71,7 +71,7 @@ const Hero = () => {
                 </span>
               </div>
 
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:block hidden">
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight lg:block hidden font-poppins">
                 Fast & Reliable
                 <span className="bg-clip-text block text-[#164972]">
                   Ambulance Service

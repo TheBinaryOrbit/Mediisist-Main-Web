@@ -1,15 +1,19 @@
 import { PhoneCall } from 'lucide-react';
-
+import Image from 'next/image';
+import call from '@/assets/call.png';
 export default function FloatingButton() {
   return (
     <div className="fixed bottom-10 right-6 z-50">
       <a href="tel:8858496391" aria-label="Call 24x7 Support">
-        <button
-          className="flex items-center gap-2 bg-red-600 text-white px-5 py-5 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 animate-bounce cursor-pointer"
-        >
-          <PhoneCall className="w-5 h-5" />
-        </button>
+
+        <div className="bg-white p-2.5   rounded-full shadow-2xl border-2 border-[#164972] hover:shadow-xl transition-shadow duration-300 animate-bounce">
+          <Image src={call} alt="Call Icon" width={40} height={40} className="rounded-full" />
+        </div>
+        
       </a>
     </div>
   );
 }
+
+// primary :"#199dd1",
+//         secondary :"#164972",

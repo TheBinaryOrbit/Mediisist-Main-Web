@@ -6,7 +6,7 @@ const About = () => {
             <div className="mb-14 text-center">
                 <span
                     className="py-1 px-4 bg-[#199dd1] rounded-full text-xs  text-white text-center font-bold">About Us</span>
-                <h2 className="text-4xl text-center font-bold text-white py-5">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold py-2 font-serif tracking-wider text-white transition-all duration-1000 mb-2">
                     Revolutionary Features
                 </h2>
                 <p className="text-lg font-normal text-gray-300 max-w-md md:max-w-2xl mx-auto">
@@ -26,9 +26,9 @@ const About = () => {
                     <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
                         <div className="w-full flex-col justify-center items-start gap-8 flex">
                             <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
-                                <h2
-                                    className="text-white text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                                    Ambulance Access Made Smarter</h2>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center sm:text-left font-bold py-2 font-serif tracking-wider text-white transition-all duration-1000 mb-2">
+                                    Ambulance Access Made Smarter
+                                </h2>
                                 <p className="text-gray-300 text-base font-normal leading-relaxed lg:text-start text-center">
                                     We are building a tech-enabled, reliable ambulance network
                                     that connects patients with verified drivers in real-time.

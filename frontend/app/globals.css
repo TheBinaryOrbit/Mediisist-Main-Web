@@ -4,3 +4,20 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: var(--font-poppins), monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-roboto), monospace;
+}
+
+/* flip.css */
+.flip {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.group:hover .flip {
+  transform: rotateY(180deg);
+}

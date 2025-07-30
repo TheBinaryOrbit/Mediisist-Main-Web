@@ -1,5 +1,7 @@
 import { ArrowLeft, Shield, Eye, Lock, Users, Phone, FileText, AlertTriangle, Database, UserCheck } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import backgroundimage from "@/assets/backgroundimage.png";
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -74,41 +76,49 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <Link 
-            href={'/'}
-            className="inline-flex items-center text-[#0066cc] hover:text-[#0052a3] mb-4 transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Back to Home
-          </Link>
-          <div className="flex items-center mb-4">
-            <div className="bg-[#0066cc] p-3 rounded-xl mr-4">
-              <Shield className="h-8 w-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-4xl font-bold text-[#1a365d]">Privacy Policy</h1>
-              <p className="text-[#0066cc] font-semibold">Mediisist Healthcare Services</p>
-            </div>
+      <div className="bg-blue-100 shadow-sm ">
+        <div className="relative min-h-[66vh]">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={backgroundimage}
+              alt="Background"
+              fill
+              className="object-cover w-full h-full"
+              quality={100}
+            />
           </div>
-          <p className="text-gray-600">Effective Date: July 2025 | Last Updated: July 3, 2025</p>
+
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-24">
+            <div className="bg-white p-3 rounded-xl mr-4">
+              <Shield className="h-8 w-8 text-[#0066cc]" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold  py-5 tracking-wider font-body text-white" data-aos="fade-up" >
+              Privacy Policy
+            </h2>
+            <p className="text-md sm:text-md font-normal text-gray-100 max-w-md md:max-w-2xl mx-auto px-5 font-body mb-4" data-aos="fade-up">
+                  Your privacy is important to us. This policy outlines how we collect, use, and protect your personal information when you interact with our services.
+            </p>
+            <p className="text-md sm:text-md font-normal text-gray-100 max-w-md md:max-w-2xl mx-auto px-5 font-body" data-aos="fade-up">
+              Effective Date: July 2025 | Last Updated: July 3, 2025
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Introduction */}
-        <div className="bg-white rounded-xl shadow-sm border p-8 mb-8">
+        <div className="rounded-xl p-4 mb-8">
           <h2 className="text-2xl font-bold text-[#1a365d] mb-4">Privacy Commitment</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            At Mediisist, we are committed to protecting your privacy and ensuring the security of your personal information. 
-            This Privacy Policy explains how we collect, use, protect, and share your information when you use our emergency 
+          <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
+            At Mediisist, we are committed to protecting your privacy and ensuring the security of your personal information.
+            This Privacy Policy explains how we collect, use, protect, and share your information when you use our emergency
             medical services, mobile application, and website.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            We understand that your health information is sensitive and personal. This policy describes our privacy practices 
-            in clear, understandable language and outlines your rights regarding your personal data. 
+          <p className="text-gray-700 leading-relaxed text-justify">
+            We understand that your health information is sensitive and personal. This policy describes our privacy practices
+            in clear, understandable language and outlines your rights regarding your personal data.
             Please contact us if you have any questions about our privacy practices.
           </p>
         </div>
@@ -116,19 +126,19 @@ const PrivacyPolicy = () => {
         {/* Sections */}
         <div className="space-y-6">
           {sections.map((section, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm border hover:shadow-md transition-shadow">
-              <div className="p-8">
+            <div key={index} className="rounded-xl  transition-shadow">
+              <div className="p-4">
                 <div className="flex items-center mb-6">
-                  <div className="bg-[#0066cc] p-3 rounded-xl mr-4">
+                  {/* <div className="bg-[#0066cc] p-3 rounded-xl mr-4">
                     <section.icon className="h-6 w-6 text-white" />
-                  </div>
+                  </div> */}
                   <h2 className="text-2xl font-bold text-[#1a365d]">{section.title}</h2>
                 </div>
                 <div className="space-y-4">
                   {section.content.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-start">
                       <div className="w-2 h-2 bg-[#0066cc] rounded-full mt-2.5 mr-4 flex-shrink-0"></div>
-                      <p className="text-gray-700 leading-relaxed">{item}</p>
+                      <p className="text-gray-700 leading-relaxed text-justify">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -143,9 +153,9 @@ const PrivacyPolicy = () => {
             <Shield className="h-6 w-6 text-green-600 mt-1 mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-xl font-bold text-green-800 mb-3">Healthcare Privacy Compliance</h3>
-              <p className="text-green-700 leading-relaxed">
-                Mediisist follows healthcare privacy best practices and maintains compliance with applicable healthcare 
-                privacy regulations. We implement appropriate safeguards to protect your health information and ensure 
+              <p className="text-green-700 leading-relaxed text-justify">
+                Mediisist follows healthcare privacy best practices and maintains compliance with applicable healthcare
+                privacy regulations. We implement appropriate safeguards to protect your health information and ensure
                 that your medical data is handled with the highest level of security and confidentiality.
               </p>
             </div>
@@ -158,9 +168,9 @@ const PrivacyPolicy = () => {
             <AlertTriangle className="h-6 w-6 text-red-600 mt-1 mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-xl font-bold text-red-800 mb-3">Emergency Information Sharing</h3>
-              <p className="text-red-700 leading-relaxed">
-                <strong>IMPORTANT:</strong> During medical emergencies, we may share your information with healthcare 
-                providers, emergency services, and medical facilities without prior consent when necessary to protect 
+              <p className="text-red-700 leading-relaxed text-justify">
+                <strong>IMPORTANT:</strong> During medical emergencies, we may share your information with healthcare
+                providers, emergency services, and medical facilities without prior consent when necessary to protect
                 your life and health. This emergency sharing is limited to information necessary for immediate medical care.
               </p>
             </div>
@@ -178,7 +188,7 @@ const PrivacyPolicy = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-3">
               <div className="flex items-center">
@@ -192,7 +202,7 @@ const PrivacyPolicy = () => {
                 <span className="ml-2">support@mediisist.in</span>
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <div className="flex items-start">
                 <Shield className="h-5 w-5 mr-3 text-blue-300 mt-0.5" />
@@ -204,10 +214,10 @@ const PrivacyPolicy = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-6 pt-6 border-t border-gray-600">
             <p className="text-sm text-gray-300">
-              Response Time: We respond to privacy inquiries within 2-3 business days. For urgent privacy concerns 
+              Response Time: We respond to privacy inquiries within 2-3 business days. For urgent privacy concerns
               or data breach notifications, please call our main service line immediately.
             </p>
           </div>
