@@ -38,7 +38,7 @@ const MediisistHero = () => {
             }
         } catch (error) {
             console.log(error);
-            toast.error("Please Try Again");
+            // toast.error("Please Try Again");
         } finally {
             setIsSubmitting(false);
         }
@@ -133,11 +133,11 @@ const MediisistHero = () => {
                                         </div>
                                         <h3 className="text-lg lg:text-xl font-bold text-gray-800">Help is on the way!</h3>
                                         <p className="text-gray-600 mt-2 mb-4 text-sm lg:text-base">Your emergency request has been received. Our team will contact you immediately.</p>
-                                        <Link href={`/getlocation/${sessionId}`}>
+                                        {/* <Link href={`/getlocation/${sessionId}`}>
                                             <button className="w-1/2 mx-auto py-2 transition duration-300 bg-[#164972] text-white font-bold hover:bg-tertiary cursor-pointer rounded-3xl text-sm lg:text-base my-3 sm:my-0">
                                                 Grant Location
                                             </button>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 ) : (
                                     <div className="flex flex-col h-full justify-between">
@@ -190,7 +190,7 @@ const MediisistHero = () => {
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <span className="mr-2 text-sm lg:text-base">BOOK AMBULANCE NOW</span>
+                                                        <span className="mr-2 text-sm lg:text-base">BOOK APPOINTMENT NOW</span>
                                                         <ChevronRight size={20} />
                                                     </>
                                                 )}

@@ -42,6 +42,12 @@ const Header = () => {
                             </Link>
                             <ul className="absolute top-[100%] mt-3 bg-slate-50 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-3  capitalize cursor-pointer rounded-xl space-y-2 z-50 transition-all duration-300 shadow-2xl">
                                 <li className="hover:bg-slate-200 rounded-lg p-2 px-3  cursor-pointer duration-200 ">
+                                    <Link href={'/info'}>
+                                        <h1 className="font-semibold font-heading">Hospital Info</h1>
+                                        <p className="text-sm font-extralight font-body">Nabha Hospital Info</p>
+                                    </Link>
+                                </li>
+                                <li className="hover:bg-slate-200 rounded-lg p-2 px-3  cursor-pointer duration-200 ">
                                     <Link href={'/ambulanceservices'}>
                                         <h1 className="font-semibold font-heading">Ambulance Services</h1>
                                         <p className="text-sm font-extralight font-body">Emergency medical care and support</p>

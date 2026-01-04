@@ -14,6 +14,3 @@ export default function FloatingButton() {
     </div>
   );
 }
-
-// primary :"#199dd1",
-//         secondary :"#164972",

@@ -150,14 +150,15 @@ const Hero = () => {
               <h1 className="text-5xl font-bold text-gray-900 leading-tight text-center">
                 Fast & Reliable
                 <span className="bg-clip-text block text-[#164972]">
-                  Ambulance Service
+                  {/* Ambulance Service */}
+                  Appointment Services
                 </span>
               </h1>
             </div>
             <div className=" w-full lg:w-full flex justify-end items-end px-5 relative">
               <img src={ambulance.src} alt="" className="absolute top-[50%] left-0 translate-y-[-20%] md:flex hidden translate-x-[-10%] z-0 scale-90" />
               <div className="bg-slate-100 rounded-3xl shadow-xl p-5 md:p-10 max-w-lg lg:ml-0 z-40 translate-x-[0%] md:translate-x-[15%]">
-                {isFormSubmitted ? (
+                {isFormSubmitted  ? (
                   <div className="text-center py-12">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(1, 144, 80, 0.1)' }}>
                       <svg className="w-10 h-10" style={{ color: '#019050' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,9 +167,9 @@ const Hero = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-gray-800">Help is on the way!</h3>
                     <p className="text-gray-600 mt-2 mb-6">Your emergency request has been received. Our team will contact you immediately.</p>
-                    <Link href={`/getlocation/${sessionId}`} className="text-blue-600 hover:underline font-bold">
+                    {/* <Link href={`/getlocation/${sessionId}`} className="text-blue-600 hover:underline font-bold">
                       Grant Location
-                    </Link>
+                    </Link> */}
                   </div>
                 ) : (
                   <>
@@ -217,7 +218,7 @@ const Hero = () => {
                           </>
                         ) : (
                           <>
-                            <span className="mr-2 text-xs sm:text-lg">BOOK AMBULANCE NOW</span>
+                            <span className="mr-2 text-xs sm:text-lg">BOOK APPOINTMENT NOW</span>
                             <ChevronRight size={20} />
                           </>
                         )}
